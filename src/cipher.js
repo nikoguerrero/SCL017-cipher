@@ -9,19 +9,19 @@ const cipher = {
     }
 
     // charCode -> UNICODE (ASCII hasta 128)
-    let charCodeArray = [];
+    let inputText = "";
       
     for(let i = 0; i < string.length; i++){
         let character = string.charCodeAt(i);
         if(character >= 97 && character <= 122) {
-          charCodeArray += String.fromCharCode((character - 97 + offset)% 26 + 97);
+          inputText += String.fromCharCode((character - 97 + offset)% 26 + 97);
         } else if(character >= 65 && character <= 90) {
-          charCodeArray += String.fromCharCode((character - 65 + offset)% 26 + 65);
+          inputText += String.fromCharCode((character - 65 + offset)% 26 + 65);
         } else {
-          charCodeArray += String.fromCharCode(character);
+          inputText += String.fromCharCode(character);
         }
     }
-    return charCodeArray;
+    return inputText;
   },
   
   decode: function(offset, string) {
@@ -33,24 +33,24 @@ const cipher = {
       throw new TypeError("error en valor de string");
     }
 
-    let charCodeArray = [];
-    
+    let inputText = "";
+
     for(let i = 0; i < string.length; i++){
       let character = string.charCodeAt(i);
-
+      console.log((character - 97 - offset) % 26 + 97);
       if(character >= 97 && character <= 122) {
         if(offset > 26) {
-        charCodeArray += String.fromCharCode((character + 97 + offset) % 26 + 97);
-        } else {
-          charCodeArray += String.fromCharCode((character - 97 - offset) % 26 + 97);
-        }
+          inputText += String.fromCharCode((character + 97 + offset) % 26 + 97);
+          } else {
+            inputText += String.fromCharCode((character - 97 - offset +26) % 26 + 97);
+          }
       } else if(character >= 65 && character <= 90) {
-        charCodeArray += String.fromCharCode((character + 65 - offset) % 26 + 65);
+        inputText += String.fromCharCode((character + 65 - offset) % 26 + 65);
       } else {
-        charCodeArray += String.fromCharCode(character);
+        inputText += String.fromCharCode(character);
       }
     }
-    return charCodeArray;
+    return inputText;
   }
 };
 
