@@ -39,7 +39,11 @@ const cipher = {
       let character = string.charCodeAt(i);
 
       if(character >= 97 && character <= 122) {
+        if(offset > 26) {
         charCodeArray += String.fromCharCode((character + 97 + offset) % 26 + 97);
+        } else {
+          charCodeArray += String.fromCharCode((character - 97 - offset) % 26 + 97);
+        }
       } else if(character >= 65 && character <= 90) {
         charCodeArray += String.fromCharCode((character + 65 - offset) % 26 + 65);
       } else {
