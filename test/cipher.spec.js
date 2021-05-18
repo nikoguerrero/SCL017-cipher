@@ -56,6 +56,11 @@ describe('cipher', () => {
     it('should return " !@" for " !@"', () => {
       expect(cipher.encode(33, ' !@')).toBe(' !@');
      });
+
+    //test para implementar offset negativo en code
+    it('encode works with negative shift', () => {
+      expect(cipher.encode(-5, 'Hello, World!')).toBe('Czggj, Rjmgy!');
+    });
   });
 
   describe('cipher.decode', () => {
@@ -102,6 +107,12 @@ describe('cipher', () => {
     //
     it('should return " !@" para " !@"', () => {
      expect(cipher.decode(33, ' !@')).toBe(' !@');
+    });
+
+
+    //test para implementar offset negativo en decode
+    it('decode works with negative shift', () => {
+      expect(cipher.decode(-5, 'Czggj, Rjmgy!')).toBe('Hello, World!');
     });
   });
 

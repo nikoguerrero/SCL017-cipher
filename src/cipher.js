@@ -7,7 +7,9 @@ const cipher = {
     if(typeof string !== "string") {
       throw new TypeError("error en valor de string");
     }
-
+    if(offset < 0) {
+      offset = 26 + (offset % 26);
+    }
     // charCode -> UNICODE (ASCII hasta 128)
     let inputText = "";
       
@@ -32,12 +34,13 @@ const cipher = {
     if(typeof string !== "string") {
       throw new TypeError("error en valor de string");
     }
-
+    if(offset < 0) {
+      offset = 26 + (offset % 26);
+    }
     let inputText = "";
 
     for(let i = 0; i < string.length; i++){
       let character = string.charCodeAt(i);
-      console.log((character - 97 - offset) % 26 + 97);
       if(character >= 97 && character <= 122) {
         if(offset > 26) {
           inputText += String.fromCharCode((character + 97 + offset) % 26 + 97);
