@@ -58,17 +58,17 @@ describe('cipher', () => {
     });
 
     
-    //tests implementados por mí
+    //tests implementados por niko guerrero:
 
     //test de implementación números
-    it('should return " 3456789012" for " 0123456789"', () => {
-      expect(cipher.encode(33, ' 0123456789')).toBe(' 3456789012');
+    it('should return "3456789012" for "0123456789"', () => {
+      expect(cipher.encode(33, '0123456789')).toBe('3456789012');
     });
 
     //test de implementación offset negativo 
     it('encode works with negative shift', () => {
-      expect(cipher.encode(-5, 'Hello, World!')).toBe('Czggj, Rjmgy!');
-      expect(cipher.encode(-33, ' 0123456789')).toBe(' 7890123456');
+      expect(cipher.encode(-33, 'Hello, World!')).toBe('Axeeh, Phkew!');
+      expect(cipher.encode(-33, '0123456789')).toBe('7890123456');
     });
   });
 
@@ -121,7 +121,7 @@ describe('cipher', () => {
 
     //test de implementación offset negativo en decode
     it('decode works with negative shift', () => {
-      expect(cipher.decode(-5, 'Czggj, Rjmgy!')).toBe('Hello, World!');
+      expect(cipher.decode(-33, 'Axeeh, Phkew!')).toBe('Hello, World!');
     });
   });
 
