@@ -40,8 +40,8 @@ describe('cipher', () => {
     // abaixo.
     //
     it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
-       expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
-     });
+      expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
+    });
 
     // Hacker edition
     //
@@ -55,11 +55,20 @@ describe('cipher', () => {
     //
     it('should return " !@" for " !@"', () => {
       expect(cipher.encode(33, ' !@')).toBe(' !@');
-     });
+    });
 
-    //test para implementar offset negativo en code
+    
+    //tests implementados por mí
+
+    //test de implementación números
+    it('should return " 3456789012" for " 0123456789"', () => {
+      expect(cipher.encode(33, ' 0123456789')).toBe(' 3456789012');
+    });
+
+    //test de implementación offset negativo 
     it('encode works with negative shift', () => {
       expect(cipher.encode(-5, 'Hello, World!')).toBe('Czggj, Rjmgy!');
+      expect(cipher.encode(-33, ' 0123456789')).toBe(' 7890123456');
     });
   });
 
@@ -106,11 +115,11 @@ describe('cipher', () => {
     // teste abaixo.
     //
     it('should return " !@" para " !@"', () => {
-     expect(cipher.decode(33, ' !@')).toBe(' !@');
+      expect(cipher.decode(33, ' !@')).toBe(' !@');
     });
 
 
-    //test para implementar offset negativo en decode
+    //test de implementación offset negativo en decode
     it('decode works with negative shift', () => {
       expect(cipher.decode(-5, 'Czggj, Rjmgy!')).toBe('Hello, World!');
     });
