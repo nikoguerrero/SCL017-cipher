@@ -119,9 +119,17 @@ describe('cipher', () => {
     });
 
 
+    //tests implementados por niko guerrero:
+
+    //test de implementación números
+    it('should return "0123456789" for "3456789012"', () => {
+      expect(cipher.decode(33, '3456789012')).toBe('0123456789');
+    });
+
     //test de implementación offset negativo en decode
     it('decode works with negative shift', () => {
       expect(cipher.decode(-33, 'Axeeh, Phkew!')).toBe('Hello, World!');
+      expect(cipher.decode(-33, '7890123456')).toBe('0123456789');
     });
   });
 
