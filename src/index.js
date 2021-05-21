@@ -27,8 +27,8 @@ function clickCode() {
 
 function clickDecode() {
     const offset = parseInt(shiftText.value);
-    const secondInputText = userText2.value;
-    userText1.value = cipher.decode(offset, secondInputText);
+    const secondInputText = userText1.value;
+    userText2.value = cipher.decode(offset, secondInputText);
 }
 
 function aboutLink() {
