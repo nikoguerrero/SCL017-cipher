@@ -6,11 +6,13 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <section>
     <div class= "container">
       <div class="box">
         <div id="root">
-          <h1>CODIFICADOR</h1>
+          <h1>AGAINST BRUTUS</h1>
         </div>
+        <div id="caesarCipher">
         <input type="text" class="input" placeholder="Texto descifrado" id="userText1" value="">
         <div class="middle">
           <button id="codeButton" class="buttonCode"> CODIFICAR </button>
@@ -18,8 +20,22 @@
           <input type="number" class="shiftInput" placeholder="shift" id="shift" value="">
         </div>
           <input type="text" class="input" placeholder="Texto cifrado" id="userText2" value="">
+          <p class="footer">¿En qué consiste este <a href="#" id="about">codificador</a>?</p>
+        </div> 
+          <div id="instructions">
+            <p class="aboutText">¿Compartes tu contraseña de Netflix con tu familia y/o amigos
+              y tienes miedo de que alguien te la robe?
+              Against Brutus ("<i>en contra de Brutus</i>") es una plataforma de encriptación basada en el famoso código César, y
+              que ayuda a generar seguridad a tus contraseñas para
+              que puedas compartirlas a través de otras redes con tus amigos y familia. Tan solo
+              necesitas acordar con tu compañer@ un número shift para que ambos puedan
+              codificar y descifrar lo que quieran. ¡Así de fácil!
+            </p>
+            <a href="#" id="back" class="backLink">volver</a>
+          </div>
           <script src="index.js" type="module"></script>
       </div>
     </div>
+  </section>
   </body>
 </html>

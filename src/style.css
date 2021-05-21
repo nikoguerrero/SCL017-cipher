@@ -2,18 +2,9 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background:#0D0D0D;
-    margin: 0 auto 0 auto;  
-    width:100%; 
+    background-image: url(../images/bg.jpg);
     text-align:center;
-    margin: 20px 0px 20px 0px;   
   }
-
-  p {
-    font-size:12px;
-    text-decoration: none;
-    color:#ffffff;
-  } 
 
   h1 {
     font-size:1.5em;
@@ -21,14 +12,37 @@ body {
     margin-bottom:30px;
   }
 
+  section {
+    height: 90vh;
+    position:relative;
+  }
+
+  .container {
+    max-width:700px;
+    width: 100%;
+    margin:auto;
+
+    height:50vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    position:absolute;
+    right:0;
+    left:0;
+    top:0;
+    bottom: 0;
+    margin:auto;
+  }
+
   .box {
     background:#22252A;
+    opacity:0.9;
     width:600px;
     height:350px;
     border-radius:6px;
     margin: 10%;
-    padding:0px 0px 70px 0px;
-    border: #0D0D0D 4px solid;
+    border: #0D0D0D 4px none;
     float:center;
     box-sizing:border-box;
     padding:0px 70px 0px 70px;
@@ -40,11 +54,11 @@ body {
     padding: 8px;
     width:450px;
     height:20px;
-    color:#AAAAAA;
+    color:#e7e7e7;
     margin-top:10px;
+    font-family: 'Roboto';
     font-size:1em;
     border-radius:40px;
-    font-family: 'Roboto';
   }
 
   .input:focus {
@@ -77,14 +91,14 @@ body {
     border-bottom: #ccc 2px solid;
     padding:8px 8px 8px 16px;
     width:50px;
-    color:#AAAAAA;
+    color:#7c7c7c;
     margin-top:15px;
     margin-bottom:10px;
     font-size:1em;
+    font-family: 'Roboto';
     border-radius:4px;
     text-align: center;
     border-radius:40px;
-    font-family: 'Roboto';
   }
 
   .shiftInput:focus {
@@ -95,6 +109,7 @@ body {
 
   .shiftInput:focus::placeholder {
     color:transparent;
+    font-weight:bold;
   }
 
   .shiftInput::-webkit-input-placeholder {
@@ -142,3 +157,38 @@ body {
   .buttonDecode:hover{
     background:#F28A80; 
   }
+
+  .footer {
+    font-family: 'Roboto';
+    font-size:0.8em;
+    color:#AAA;
+    margin-top:30px;
+  }
+
+  a:link {
+    color:#8C5E5E;
+  }
+
+  a:visited {
+    color:azure;
+  }
+
+  a:hover {
+    color:black;
+  }
+
+  .aboutText {
+    text-align:justify;
+    text-justify:inter-word;
+    font-family: 'Roboto';
+    font-size:0.9em;
+    color:#AAA;
+  }
+  
+  .backLink {
+    font-family:'Roboto';
+    font-size:0.8em;
+  }
+
+  
+
