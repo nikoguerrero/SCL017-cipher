@@ -9,14 +9,14 @@ const cipher = {
     }
 
     // charCode -> UNICODE (ASCII hasta 128)
-    let inputText = "";
+    let output = "";
 
     for(let i = 0; i < string.length; i++){
 
         const character = string.charCodeAt(i);
         const characterLowerCase = character >= 97 && character <= 122;
         const characterUpperCase = character >= 65 && character <= 90;
-        const characterNumber = character >= 45 && character <= 57;
+        const characterNumber = character >= 48 && character <= 57;
         let offsetTemp = offset;
 
         if(offsetTemp < 0) {
@@ -28,16 +28,16 @@ const cipher = {
         }
 
         if(characterLowerCase) {
-          inputText += String.fromCharCode((character - 97 + offsetTemp)% 26 + 97);
+          output += String.fromCharCode((character - 97 + offsetTemp)% 26 + 97);
         } else if(characterUpperCase) {
-          inputText += String.fromCharCode((character - 65 + offsetTemp)% 26 + 65);
+          output += String.fromCharCode((character - 65 + offsetTemp)% 26 + 65);
         } else if(characterNumber) {
-          inputText += String.fromCharCode((character - 48 + offsetTemp)% 10 + 48);
+          output += String.fromCharCode((character - 48 + offsetTemp)% 10 + 48);
         } else  {
-          inputText += String.fromCharCode(character);
+          output += String.fromCharCode(character);
         }
     }
-    return inputText;
+    return output;
   },
   
   decode: function(offset, string) {
@@ -49,35 +49,38 @@ const cipher = {
       throw new TypeError("error en valor de string");
     }
 
-    let inputText = "";
+    let output = "";
 
     for(let i = 0; i < string.length; i++){
 
-      const character = string.charCodeAt(i);
+      let character = string.charCodeAt(i);
       const characterLowerCase = character >= 97 && character <= 122;
       const characterUpperCase = character >= 65 && character <= 90;
-      const characterNumber = character >= 45 && character <= 57;
-      let offsetTemp = offset;
+      const characterNumber = character >= 48 && character <= 57;
 
-      if(offsetTemp < 0) {
-        if(characterLowerCase || characterUpperCase) {
-          offsetTemp = 26 + (offsetTemp % 26);
+
+      if(characterLowerCase || characterUpperCase || characterNumber) {
+        
+        let modulo = 26;
+        let ascii = 65;
+  
+        if(characterLowerCase) {
+          ascii = 97;
         } else if(characterNumber) {
-          offsetTemp = 10 + (offsetTemp % 10);
+          modulo = 10;
+          ascii = 48;
         }
-      }
 
-      if(characterLowerCase) {
-        inputText += String.fromCharCode((character - 97 - offsetTemp + 52)  % 26 + 97);
-      } else if(characterUpperCase) {
-        inputText += String.fromCharCode((character + 65 - offsetTemp) % 26 + 65);
-      } else if(characterNumber) {
-        inputText += String.fromCharCode((character - 48 - offsetTemp + 10) % 10 + 48);
-      } else  {
-        inputText += String.fromCharCode(character);
+        let charModulo = ((character - ascii) - offset) % modulo;
+        if(charModulo < 0) {
+          charModulo = charModulo + modulo;
+        }
+        output += String.fromCharCode((charModulo + ascii));
+      } else {
+        output += String.fromCharCode(character);
       }
     }
-    return inputText;
+    return output;
   }
 };
 

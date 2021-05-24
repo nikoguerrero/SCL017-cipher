@@ -77,6 +77,8 @@ Los prototipos fueron varios, pero tomó poco tiempo desarrollarlos. El diseño 
 
 > ![Prototipo 4](img/prototype4.jpg)
 
+## Plan de acción
+
 ***
 ### 3.3 Repositorio del código (GitHub) y publicación de la web (GitHub Pages)
 Cuando termines, y antes de ir a la sesión de _Project Feedback_, tu código deberá
@@ -90,6 +92,9 @@ aprenderás durante este proyecto.
 Aquellos que faltaron en el proyecto de preadmisión:
 * Aprender más de *functions, arrays* y *objects*. 
 * 
+<details>
+  <summary>Clic para mostrar</summary>
+</details>
 
 <details>
   <summary>Respecto a este proyecto:</summary>
