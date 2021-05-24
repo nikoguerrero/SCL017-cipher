@@ -48,22 +48,32 @@ const cipher = {
     if(typeof string !== "string") {
       throw new TypeError("error en valor de string");
     }
-    if(offset < 0) {
-      offset = 26 + (offset % 26);
-    }
+
     let inputText = "";
 
     for(let i = 0; i < string.length; i++){
-      let character = string.charCodeAt(i);
-      if(character >= 97 && character <= 122) {
-        if(offset > 26) {
-          inputText += String.fromCharCode((character + 97 + offset) % 26 + 97);
-          } else {
-            inputText += String.fromCharCode((character - 97 - offset +26) % 26 + 97);
-          }
-      } else if(character >= 65 && character <= 90) {
-        inputText += String.fromCharCode((character + 65 - offset) % 26 + 65);
-      } else {
+
+      const character = string.charCodeAt(i);
+      const characterLowerCase = character >= 97 && character <= 122;
+      const characterUpperCase = character >= 65 && character <= 90;
+      const characterNumber = character >= 45 && character <= 57;
+      let offsetTemp = offset;
+
+      if(offsetTemp < 0) {
+        if(characterLowerCase || characterUpperCase) {
+          offsetTemp = 26 + (offsetTemp % 26);
+        } else if(characterNumber) {
+          offsetTemp = 10 + (offsetTemp % 10);
+        }
+      }
+
+      if(characterLowerCase) {
+        inputText += String.fromCharCode((character - 97 - offsetTemp + 52)  % 26 + 97);
+      } else if(characterUpperCase) {
+        inputText += String.fromCharCode((character + 65 - offsetTemp) % 26 + 65);
+      } else if(characterNumber) {
+        inputText += String.fromCharCode((character - 48 - offsetTemp + 10) % 10 + 48);
+      } else  {
         inputText += String.fromCharCode(character);
       }
     }
