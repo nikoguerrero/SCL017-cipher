@@ -30,9 +30,9 @@ es reemplazada por otra que se encuentra un número fijo de posiciones
 
 **¿Compartes tu contraseña de Netflix con tu familia y/o amigos y tienes miedo de que alguien te la robe?**
 
-Against Brutus (*"En contra de Brutus"*, el traidor del César) es una plataforma web de encriptación basada en el famoso código César, la que ayuda a generar un poco más de seguridad a las contraseñas para que puedan ser compartidas a través de otras redes con amigos y familia. 
-Solo se necesita acordar con quien se desee compartir la contraseña un número de desplazamiento en particular (shift) para que así ambos puedan codificar y decodificar la misma. 
-La idea surge porque es común que las personas compartan, por ejemplo, *passwords* de plataformas como Netflix, Amazon Prime, o hasta el mismo correo. Y es común que exista un miedo a que sean interceptadas por las redes en las que se comparten. Así, Against Brutus surge como una manera de dificultar tal situación y evitar cualquier robo de información.
+Against Brutus (*"En contra de Brutus"*, el traidor del César) es una plataforma web de encriptación que ayuda a generar un poco más de seguridad a las contraseñas para que estas puedan ser compartidas con amigos y familia. Solo se necesita acordar un número de desplazamiento en particular (shift) para así ambos poder codificar y decodificar el texto.
+<br>
+La idea surge debido a la práctica común de compartir, por ejemplo, *passwords* de plataformas como Netflix, Amazon Prime, o incluso del mismo correo personal. Sin embargo, suele existir un miedo a que estas sean interceptadas por las redes y sean robadas. Así, Against Brutus aparece como una forma de dificultar tal situación y evitar pequeñas brechas de seguridad.
 
 Against Brutus permite codificar:
 * mayúsculas
