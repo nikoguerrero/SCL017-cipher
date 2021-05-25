@@ -69,6 +69,9 @@ Se agrega también un link que dirige a una explicación simple sobre la funció
 
 Los prototipos fueron varios, pero tomó poco tiempo desarrollarlos. El diseño final, si bien no igual, mantiene la esencia y los aspectos fundamentales de la idea original.
 
+<details>
+<summary> Clic para ver prototipos </summary>
+
 > ![Prototipo 1](img/prototype1.jpg)
 
 > ![Prototipo 2](img/prototype2.jpg)
@@ -77,7 +80,9 @@ Los prototipos fueron varios, pero tomó poco tiempo desarrollarlos. El diseño 
 
 > ![Prototipo 4](img/prototype4.jpg)
 
-## Plan de acción
+</details>
+<br>
+
 
 ***
 ### 3.3 Repositorio del código (GitHub) y publicación de la web (GitHub Pages)
@@ -92,9 +97,6 @@ aprenderás durante este proyecto.
 Aquellos que faltaron en el proyecto de preadmisión:
 * Aprender más de *functions, arrays* y *objects*. 
 * 
-<details>
-  <summary>Clic para mostrar</summary>
-</details>
 
 <details>
   <summary>Respecto a este proyecto:</summary>
