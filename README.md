@@ -91,7 +91,7 @@ Aquellos objetivos prendientes del proceso de preadmisión que se lograron con e
 > Aprender un poco más de:
 > * [x] Functions. 
 > * [x] Arrays. 
-> * [o] Objects.
+> * [x] Objects.
 <br>
 <br>
 
