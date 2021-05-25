@@ -86,7 +86,7 @@ Los prototipos fueron varios, pero tomó poco tiempo desarrollarlos. El diseño 
 
 ## Objetivos de aprendizaje del proyecto anterior
 
-Aquellos objetivos prendientes del proceso de preadmisión que se lograron con este proyecto:
+Aquellos objetivos pendientes del proceso de preadmisión que se lograron con este proyecto:
 
 > Aprender un poco más de:
 > * [x] Functions. 
