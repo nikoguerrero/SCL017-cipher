@@ -1,4 +1,4 @@
-function caesarCipher (character, offset) {
+function cipherChar (offset, character) {
   const characterLowerCase = character >= 97 && character <= 122;
   const characterUpperCase = character >= 65 && character <= 90;
   const characterNumber = character >= 48 && character <= 57;
@@ -25,44 +25,33 @@ function caesarCipher (character, offset) {
   }
 }
 
+function cipherString(offset, string) {
+  if(typeof offset !== "number") {
+    throw new TypeError("error en valor de offset");
+  }
+
+  if(typeof string !== "string") {
+    throw new TypeError("error en valor de string");
+  }
+
+  // se guarda el resultado del cifrado
+  let cipherResult = "";
+
+  for(let i = 0; i < string.length; i++){
+
+      const character = string.charCodeAt(i);
+      cipherResult += cipherChar(offset, character);
+  }
+  return cipherResult;
+}
+
 const cipher = {
   encode: function(offset, string) {
-    if(typeof offset !== "number") {
-      throw new TypeError("error en valor de offset");
-    }
-
-    if(typeof string !== "string") {
-      throw new TypeError("error en valor de string");
-    }
-
-    // charCode -> UNICODE (ASCII hasta 128)
-    let output = "";
-
-    for(let i = 0; i < string.length; i++){
-
-        const character = string.charCodeAt(i);
-        output += caesarCipher(character, offset);
-    }
-    return output;
+    return cipherString(offset,string);
   },
   
   decode: function(offset, string) {
-    if(typeof offset !== "number") {
-      throw new TypeError("error en valor de offset");
-    }
-
-    if(typeof string !== "string") {
-      throw new TypeError("error en valor de string");
-    }
-
-    let output = "";
-
-    for(let i = 0; i < string.length; i++){
-
-      let character = string.charCodeAt(i);
-      output += caesarCipher(character, -offset);
-    }
-    return output;
+    return cipherString(-offset,string);
   }
 };
 
