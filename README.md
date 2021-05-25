@@ -78,68 +78,20 @@ Los prototipos fueron varios, pero tomó poco tiempo desarrollarlos. El diseño 
 
 > ![Prototipo 3](img/prototype3.jpg)
 
-> ![Prototipo 4](img/prototype4.jpg)
-
 </details>
 <br>
 
 
 ***
-### 3.3 Repositorio del código (GitHub) y publicación de la web (GitHub Pages)
-Cuando termines, y antes de ir a la sesión de _Project Feedback_, tu código deberá
-estar subido a GitHub (_commit/push_) y la interfaz será desplegada (publicada)
-usando _GitHub pages_. Si no sabes lo que es GitHub, no te preocupes, lo
-aprenderás durante este proyecto.
 
+## Objetivos de aprendizaje del proyecto anterior
 
-## Objetivos de aprendizaje
+Aquellos objetivos prendientes del proceso de preadmisión que se lograron con este proyecto:
 
-Aquellos que faltaron en el proyecto de preadmisión:
-* Aprender más de *functions, arrays* y *objects*. 
-* 
+> Aprender un poco más de:
+> * [x] Functions. 
+> * [x] Arrays. 
+> * [o] Objects.
+<br>
+<br>
 
-<details>
-  <summary>Respecto a este proyecto:</summary>
-### HTML y CSS
-
-* [] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [] Uso de selectores de CSS.
-* [] Construir tu aplicación respetando el diseño realizado (maquetación).
-
-### DOM
-
-* [] Uso de selectores del DOM.
-* [] Manejo de eventos del DOM.
-* [] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-(appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
-
-### JavaScript
-
-* [] Manipulación de strings.
-* [] Uso de condicionales (if-else | switch | operador ternario)
-* [] Uso de bucles (for | for..in | for..of | while)
-* [] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [] Declaración correcta de variables (const & let)
-
-### Testing
-
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
-
-### Estructura del código y guía de estilo
-
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
-
-### Git y GitHub
-
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
-
-### UX
-
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
-* [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
-
-</details>
