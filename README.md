@@ -85,7 +85,7 @@ Los prototipos fueron varios, pero tomó poco tiempo desarrollarlos. El diseño 
 
 ***
 
-## Objetivos de aprendizaje del proyecto anterior
+## Objetivos de aprendizaje previos
 
 Aquellos objetivos pendientes del proceso de preadmisión que se lograron con este proyecto:
 
