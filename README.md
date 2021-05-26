@@ -8,7 +8,8 @@
 * [Interfaz](#interfaz)
 * [Sobre el diseño](#sobre-el-diseño)
 * [Prototipos](#prototipos)
-* [Objetivos de aprendizaje](#objetivos-de-aprendizaje)
+* [Objetivos de aprendizaje pendientes](#objetivos-de-aprendizaje-pendientes)
+* [Enlace](#enlace)
 
 ***
 
