@@ -127,7 +127,7 @@ describe('cipher', () => {
     });
 
     //test de implementación offset negativo
-    it('decode works with negative shift with', () => {
+    it('decode works with negative shift', () => {
       expect(cipher.decode(-33, 'Axeeh, Phkew!')).toBe('Hello, World!');
       expect(cipher.decode(-33, '7890123456')).toBe('0123456789');
     });

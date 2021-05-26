@@ -1,7 +1,5 @@
 import cipher from './cipher.js';
 
-console.log(cipher);
-
 const codeButton = document.getElementById("codeButton");
 const decodeButton = document.getElementById("decodeButton");
 const userText1 = document.getElementById("userText1");
